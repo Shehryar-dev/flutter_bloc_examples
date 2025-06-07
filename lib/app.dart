@@ -9,7 +9,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Bloc Examples',
-      themeMode: ThemeMode.system,
+      themeMode: ThemeMode.dark,
       theme: _lightThemeData(),
       darkTheme: _darkThemeData(),
       home: const HomeScreen(),
@@ -19,14 +19,15 @@ class MyApp extends StatelessWidget {
   ThemeData _darkThemeData() {
     return ThemeData(
       brightness: Brightness.dark,
-      useMaterial3: true,
+      useMaterial3: false,
       colorScheme: ColorScheme.fromSeed(
         seedColor: Colors.tealAccent,
         brightness: Brightness.dark,
       ),
       scaffoldBackgroundColor: const Color(0xFF121212),
-      appBarTheme: const AppBarTheme(
-        backgroundColor: Color(0xFF1E1E1E),
+      appBarTheme:  AppBarTheme(
+        // backgroundColor: Color(0xFF1E1E1E),
+        backgroundColor: Colors.blue.shade900,
         foregroundColor: Colors.white,
         elevation: 0,
       ),
