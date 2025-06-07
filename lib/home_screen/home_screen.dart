@@ -37,7 +37,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
       ),
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Flutter BLoC Examples'),
+          title:  Text('Flutter BLoC Examples',style: TextStyle(  fontSize: 16, fontWeight: FontWeight.bold),),
           centerTitle: true,
         ),
         body: AnimatedList(
