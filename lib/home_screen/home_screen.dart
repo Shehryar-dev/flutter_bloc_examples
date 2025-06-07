@@ -10,14 +10,14 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
-  final List<_WidgetItem> widgetItems = [
-    _WidgetItem(
+  final List<_ExamplesItem> widgetItems = [
+    _ExamplesItem(
       title: 'Example 1 - Counter BLoC',
       subtitle: 'Basic BLoC with increment/decrement logic',
       icon: Icons.exposure_plus_1,
       destination: const CounterBlocExample(),
     ),
-    _WidgetItem(
+    _ExamplesItem(
       title: 'Example 2 - Theme BLoC',
       subtitle: 'Toggling light/dark themes using BLoC',
       icon: Icons.dark_mode,
@@ -73,13 +73,13 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
   }
 }
 
-class _WidgetItem {
+class _ExamplesItem {
   final String title;
   final String subtitle;
   final IconData icon;
   final Widget destination;
 
-  _WidgetItem({
+  _ExamplesItem({
     required this.title,
     required this.subtitle,
     required this.icon,
