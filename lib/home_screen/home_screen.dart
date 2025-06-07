@@ -23,6 +23,12 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
       icon: Icons.dark_mode,
       destination: const ThemeBlocExample(),
     ),
+    _ExamplesItem(
+      title: 'Example 3 - Currency Converter BLoC',
+      subtitle: 'Convert currencies with real-time API & Bloc',
+      icon: Icons.currency_exchange,
+      destination: const CurrencyConverterScreen(),
+    ),
     // Add more examples here...
   ];
 
