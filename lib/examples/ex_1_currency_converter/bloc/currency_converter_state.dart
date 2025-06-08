@@ -1,6 +1,10 @@
 part of 'currency_converter_bloc.dart';
 
-@immutable
-sealed class CurrencyConverterState {}
 
-final class CurrencyConverterInitial extends CurrencyConverterState {}
+class CurrencyConverterState extends Equatable{
+
+
+  @override
+  // TODO: implement props
+  List<Object?> get props => [];
+}
