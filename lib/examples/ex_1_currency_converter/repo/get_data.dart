@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'package:flutter_bloc_examples/constants/api_url.dart';
 import 'package:http/http.dart' as http;
 
+
 class GetData {
   Future<double?> fetchConversionRate(String from, String to) async {
     try {

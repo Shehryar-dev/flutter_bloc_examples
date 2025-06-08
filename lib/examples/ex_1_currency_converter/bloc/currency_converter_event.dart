@@ -1,6 +1,7 @@
 part of 'currency_converter_bloc.dart';
 
 
+
 abstract class CurrencyConverterEvent extends Equatable {
   const CurrencyConverterEvent();
   @override
@@ -17,3 +18,5 @@ class FetchData extends CurrencyConverterEvent {
   @override
   List<Object?> get props => [from, to, amount];
 }
+
+class LoadCurrencies extends CurrencyConverterEvent {}

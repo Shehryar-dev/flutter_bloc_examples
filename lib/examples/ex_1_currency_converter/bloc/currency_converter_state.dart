@@ -2,8 +2,6 @@ part of 'currency_converter_bloc.dart';
 
 
 // Bloc State
-
-
 class CurrencyConverterState extends Equatable {
   final bool isLoading;
   final String fromCurrency;
@@ -11,6 +9,7 @@ class CurrencyConverterState extends Equatable {
   final double amount;
   final double? result;
   final String? error;
+  final List<String> currencyList;
 
   const CurrencyConverterState({
     this.isLoading = false,
@@ -19,6 +18,7 @@ class CurrencyConverterState extends Equatable {
     this.amount = 0.0,
     this.result,
     this.error,
+    this.currencyList = const [],
   });
 
   CurrencyConverterState copyWith({
@@ -28,6 +28,7 @@ class CurrencyConverterState extends Equatable {
     double? amount,
     double? result,
     String? error,
+    List<String>? currencyList,
   }) {
     return CurrencyConverterState(
       isLoading: isLoading ?? this.isLoading,
@@ -36,9 +37,11 @@ class CurrencyConverterState extends Equatable {
       amount: amount ?? this.amount,
       result: result ?? this.result,
       error: error ?? this.error,
+      currencyList: currencyList ?? this.currencyList,
     );
   }
 
   @override
-  List<Object?> get props => [isLoading, fromCurrency, toCurrency, amount, result, error];
+  List<Object?> get props => [isLoading, fromCurrency, toCurrency, amount, result, error, currencyList];
 }
+

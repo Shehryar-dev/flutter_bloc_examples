@@ -1,6 +1,9 @@
 
 
+import 'package:flutter_bloc/flutter_bloc.dart';
+
 import '../constants/screen_path.dart';
+import '../examples/ex_1_currency_converter/bloc/currency_converter_bloc.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -27,7 +30,10 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
       title: 'Example 3 - Currency Converter BLoC',
       subtitle: 'Convert currencies with real-time API & Bloc',
       icon: Icons.currency_exchange,
-      destination: const CurrencyConverterScreen(),
+      destination: BlocProvider(
+        create: (_) => CurrencyConverterBloc()..add(LoadCurrencies()),
+        child: CurrencyConverterScreen(),
+      ),
     ),
     // Add more examples here...
   ];
