@@ -1,7 +1,5 @@
 part of 'currency_converter_bloc.dart';
 
-
-// Bloc State
 class CurrencyConverterState extends Equatable {
   final bool isLoading;
   final String fromCurrency;

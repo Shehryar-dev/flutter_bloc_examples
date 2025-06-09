@@ -1,4 +1,5 @@
 
+import 'package:flutter_bloc_examples/constants/api_url.dart';
 import 'package:http/http.dart' as http;
 import '../../../constants/screen_path.dart';
 part 'currency_converter_event.dart';
@@ -47,7 +48,7 @@ class CurrencyConverterBloc extends Bloc<CurrencyConverterEvent, CurrencyConvert
     emit(state.copyWith(isLoading: true, error: null));
 
     try {
-      final url = Uri.parse('https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies.json');
+      final url = Uri.parse(ApiUrl.fullUrl);
       final response = await http.get(url);
 
       if (response.statusCode == 200) {
